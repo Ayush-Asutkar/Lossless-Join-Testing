@@ -44,9 +44,6 @@ public class FunctionalDependency {
 
     @Override
     public String toString() {
-        return "FunctionalDependency{" +
-                "left='" + left + '\'' +
-                ", right='" + right + '\'' +
-                '}';
+        return left + "->" + right;
     }
 }
