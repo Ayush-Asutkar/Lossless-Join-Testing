@@ -29,7 +29,7 @@ and a set F of functional dependencies.
                     Make the symbols in each column that correspond to an attribute in Y be the same in all these rows as follows:
                         If any of the rows has an "a" symbol for the column, set the other rows to that same "a" symbol in the column.
                         If no "a" symbol exists for the attribute in any of the rows, choose one of the "b" symbols that appear in one
-                            of the "b" symbols that appear in one of the rows for the attribute and set the other rows to that same "b" symbol in the column;
+                        of the "b" symbols that appear in one of the rows for the attribute and set the other rows to that same "b" symbol in the column;
                 }
             }
         }
