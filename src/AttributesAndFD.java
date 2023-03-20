@@ -97,7 +97,7 @@ public class AttributesAndFD {
          * For each row i representing relation schema Ri
          ****** For each column j representing attribute Aj
          ************* if (relation Ri include attribute Aj) => set matrix[i][j] = aj*/
-        Object[] arr = attributes.toArray();
+        Object[] arr = this.attributes.toArray();
 
         HashMap<Character, Integer> mapOfCharToIndex = new HashMap<>();
         // a->1, f-2, example according to the HashSet
@@ -108,7 +108,7 @@ public class AttributesAndFD {
         for(int i=0; i<matrix.length; i++) {
             for(int j=0; j<matrix[0].length; j++) {
                 // Decomposition Ri
-                Attributes decompi = decomposition.get(i);
+                Attributes decompi = this.decomposition.get(i);
 
                 // Attribute Aj
                 char aj = (char) arr[j];
@@ -136,18 +136,18 @@ public class AttributesAndFD {
         while(flag) {
             flag = false;
             boolean modified = false;
-            for (FunctionalDependency fd : functionalDependencies) {
+            for (FunctionalDependency fd : this.functionalDependencies) {
                 ArrayList<Boolean> mark = new ArrayList<>();
-                for(int j=0; j<sizeDecomp; j++) {
+                for(int j=0; j<this.sizeDecomp; j++) {
                     mark.add(true);
                 }
 
-                for(int i=0; i<sizeDecomp; i++) {
+                for(int i=0; i<this.sizeDecomp; i++) {
                     if(mark.get(i)) {
                         mark.set(i, false);
                         ArrayList<Integer> index = new ArrayList<>();
 
-                        for(int j=0; j<sizeDecomp; j++) {
+                        for(int j=0; j<this.sizeDecomp; j++) {
                             boolean isEqual = true;
 
                             char[] left = fd.getLeft().toCharArray();
@@ -223,6 +223,7 @@ public class AttributesAndFD {
     }
 
     private void printMatrix(Object[][] matrix) {
+        System.out.println("\n" + Colors.ANSI_BLUE);
         for (Object[] objects : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
                 System.out.print(objects[j] + "\t");
