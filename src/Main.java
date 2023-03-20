@@ -4,7 +4,7 @@ public class Main {
     private static final AttributesAndFD attributesFD = new AttributesAndFD();
 
     public static void main(String[] args) {
-        System.out.println(Colors.ANSI_RED + "******For this code, please keep the attributes only of single letter characters.******\n" + Colors.ANSI_RESET);
+        System.out.println(Colors.ANSI_RED + "\n\n******For this code, please keep the attributes only of single letter characters.******\n" + Colors.ANSI_RESET);
 
         Scanner sc = new Scanner(System.in);
 
@@ -14,13 +14,13 @@ public class Main {
 
         System.out.println(Colors.ANSI_PURPLE + attributesFD);
 
-        System.out.println(Colors.ANSI_RESET + "Enter the number of functional dependency");
+        System.out.print(Colors.ANSI_RESET + "\nEnter the number of functional dependencies: ");
         int sizeOfFD = sc.nextInt();
         String backslash = sc.nextLine();
         attributesFD.initializeFD(sizeOfFD);
 
 
-        System.out.println(Colors.ANSI_RESET + "Enter the functional dependency in following format");
+        System.out.println(Colors.ANSI_RESET + "\nEnter the functional dependency in following format");
         System.out.println("Format:- AB->D");
 
         for(int i=0; i<attributesFD.getSizeOfFD(); i++) {
@@ -39,12 +39,12 @@ public class Main {
 
         //test for Lossless Join decomposition
         //take input the decomposition
-        System.out.println(Colors.ANSI_RESET + "Enter the number of decomposition:");
+        System.out.print(Colors.ANSI_RESET + "Enter the number of decomposition: ");
         int numOfDecomposition = sc.nextInt();
         backslash = sc.nextLine();
         attributesFD.initializeDecomposition(numOfDecomposition);
 
-        System.out.println(Colors.ANSI_RESET + "Enter the decomposition: (each on new line and space separated)");
+        System.out.println(Colors.ANSI_RESET + "\nEnter the decomposition: (each on new line)");
         for(int i=0; i<attributesFD.getNumOfDecomposition(); i++) {
             input = sc.nextLine();
             boolean addedCorrectly = attributesFD.addDecomposition(input);

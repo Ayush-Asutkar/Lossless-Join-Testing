@@ -71,8 +71,9 @@ public class AttributesAndFD {
     }
 
     public void printDecomposition() {
+        System.out.println(Colors.ANSI_PURPLE + "Following is the decomposition:");
         for (Attributes att : decomposition) {
-            System.out.println(Colors.ANSI_PURPLE + att.getAttributes());
+            System.out.println(att.getAttributes());
         }
     }
 
