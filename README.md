@@ -36,14 +36,17 @@ and a set F of functional dependencies.
     5. If a row is made up entirely of "a" symbols, then the decomposition has the losslss join property, otherwise it does not.
 
 ## Input format for the given code:
-1. Enter all the attributes of the given relation in space separated manner. For this code please adhere to single letter characters.
+1. Enter all the attributes of the given relation in a space separated manner. For this code please adhere to single letter characters.
 2. Enter the number of functional dependencies.
 3. Enter the functional dependency in the format: AB->C, B->DEF, etc.
 4. Enter the number of decompositions.
-5. Enter the decomposition, each decomposition on new line and attributes be space separated.
+5. Enter the decomposition, each decomposition on a new line and attributes be space separated.
 
 
 ## Output format:
 1. Final matrix is shown.
 2. A verdict showing the decomposition is lossless or not.
 
+## Screenshot of output:
+1. Not A lossless Join Decomposition<br/><img src="IO_Images/Not_Lossless.png" alt="Not Lossless join">
+2. A lossless Join Decomposition<br/><img src="IO_Images/Lossless.png" alt="Lossless join">

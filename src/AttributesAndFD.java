@@ -199,8 +199,6 @@ public class AttributesAndFD {
                 flag = true;
             }
         }
-
-        System.out.println("Final Matrix:");
         printMatrix(matrix);
         return checkingRowsAsA(matrix);
     }
@@ -223,7 +221,7 @@ public class AttributesAndFD {
     }
 
     private void printMatrix(Object[][] matrix) {
-        System.out.println("\n" + Colors.ANSI_BLUE);
+        System.out.println(Colors.ANSI_BLUE + "\nFinal Matrix:");
         for (Object[] objects : matrix) {
             for (int j = 0; j < matrix[0].length; j++) {
                 System.out.print(objects[j] + "\t");
@@ -232,7 +230,6 @@ public class AttributesAndFD {
         }
         System.out.println();
     }
-
 
     @Override
     public String toString() {

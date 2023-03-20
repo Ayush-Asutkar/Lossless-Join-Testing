@@ -44,7 +44,7 @@ public class Main {
         backslash = sc.nextLine();
         attributesFD.initializeDecomposition(numOfDecomposition);
 
-        System.out.println(Colors.ANSI_RESET + "\nEnter the decomposition: (each on new line)");
+        System.out.println(Colors.ANSI_RESET + "\nEnter the decomposition: (each on new line and in space separated manner)");
         for(int i=0; i<attributesFD.getNumOfDecomposition(); i++) {
             input = sc.nextLine();
             boolean addedCorrectly = attributesFD.addDecomposition(input);
